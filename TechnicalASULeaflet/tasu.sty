@@ -1,0 +1,63 @@
+\ProvidesPackage{tasu}
+\usepackage{helvet}
+\usepackage{parskip}
+\setmargins{2cm}{2cm}{1cm}{1cm}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[export]{adjustbox}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{epigraph}
+    \setlength \epigraphwidth{200pt}
+
+\usepackage{xcolor}
+    % Scouts Primary Palette Colours
+    \definecolor{scout-purple}{RGB}{77,33,119}
+    \definecolor{scout-green}{RGB}{134,162,11}
+
+    % Scouts Secondary Palette Colours
+    \definecolor{scout-mauve}{RGB}{139,0,102}
+    \definecolor{scout-orange}{RGB}{243,122,31}
+    \definecolor{scout-blue}{RGB}{0,105,144}
+    \definecolor{scout-brown}{RGB}{157,85,45}
+    \definecolor{scout-grey}{RGB}{65,90,104}
+    \definecolor{scout-black}{RGB}{0,19,35}
+
+% Scouts logo on front and back pages
+\AddToBackground{1}{%  
+    \put(75,20){\rotatebox{6}{\includegraphics[width=5cm]{../../img/Scoutlogo_4purple}}}
+}
+
+\AddToBackground{6}{%
+    \put(75,20){\rotatebox{6}{\includegraphics[width=5cm]{../../img/Scoutlogo_4purple}}}
+}
+
+% Section Styling
+\newif\ifwithrotation
+
+\newcommand \basictitlebeforecode[1] {%
+    \noindent \parbox[t]{\dimexpr\textwidth\relax}{\raggedright#1}%
+}
+
+\newcommand \fulltitlebeforecode[1] {
+    \ifwithrotation
+        \rotatebox{6}{\basictitlebeforecode{#1}}
+    \else
+        \basictitlebeforecode{#1}
+    \fi
+}
+
+\usepackage[explicit]{titlesec}
+    \titleformat{\section}[hang]
+        {\Huge\sffamily\bfseries\color{scout-green}}
+        {}{0em}
+        {\fulltitlebeforecode{#1}}
+
+    \titleformat{\subsection}[hang]
+        {\LARGE\sffamily\bfseries\color{scout-purple}}
+        {}{0em}
+        {\fulltitlebeforecode{#1}}
+
+    \titleformat{\subsubsection}[hang]
+        {\large\sffamily\bfseries\color{scout-purple}}
+        {}{0em}
+        {\fulltitlebeforecode{#1}}
