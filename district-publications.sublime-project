@@ -16,7 +16,7 @@
 				"*.sty"
 			],
 			"follow_symlinks": true,
-			"path": "leaflets",
+			"path": "tex",
 		},
 	],
 	"settings":
