@@ -18,15 +18,6 @@
 			"follow_symlinks": true,
 			"path": "leaflets",
 		},
-		{
-			"file_include_patterns":
-			[
-				"*.tex",
-				"*.sty"
-			],
-			"follow_symlinks": true,
-			"path": "TechnicalASULeaflet",
-		},	
 	],
 	"settings":
 	[
