@@ -1,0 +1,30 @@
+\documentclass[12pt,foldmark]{leaflet}
+\usepackage{scoutsLeaflet}
+
+\begin{document}
+% Front cover page (1)
+\scoutstitle{DISTRICT EXECUTIVE COMMITTEE}
+{Introduction and Essential Information}
+
+% Inner lhs page (2)
+\withrotationtrue
+\section{Rotated Section Heading}
+\withrotationfalse
+\subsection{Ordinary Subsection Heading}
+\newpage
+
+% Inner middle page (3)
+page 3 content
+\newpage
+
+% Inner rhs page (4)
+page 4 content
+\newpage
+
+% Folded in page (5)
+\input{merseyWeaverContactPage}
+
+% Back cover page (6)
+\input{leafletPage6}
+
+\end{document}
