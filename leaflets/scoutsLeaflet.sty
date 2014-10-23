@@ -22,16 +22,7 @@
     \definecolor{scout-grey}{RGB}{65,90,104}
     \definecolor{scout-black}{RGB}{0,19,35}
 
-% Scouts logo on front and back pages
-\AddToBackground{1}{%  
-    \put(75,20){\rotatebox{6}{\includegraphics[width=5cm]{../img/Scoutlogo_4purple}}}
-}
-
-\AddToBackground{6}{%
-    \put(75,20){\rotatebox{6}{\includegraphics[width=5cm]{../img/Scoutlogo_4purple}}}
-}
-
-% Section Styling
+% Section Styling with Scout colours and rotation
 \newif\ifwithrotation
 
 \newcommand \basictitlebeforecode[1] {%
@@ -61,3 +52,24 @@
         {\large\sffamily\bfseries\color{scout-purple}}
         {}{0em}
         {\fulltitlebeforecode{#1}}
+
+% Scouts logo on front and back pages
+\AddToBackground{1}{%  
+    \put(75,20){\rotatebox{6}{\includegraphics[width=5cm]{../img/Scoutlogo_4purple}}}
+}
+
+\AddToBackground{6}{%
+    \put(75,20){\rotatebox{6}{\includegraphics[width=5cm]{../img/Scoutlogo_4purple}}}
+}
+
+% Title Page
+\newcommand \scoutstitle[2] {
+    \withrotationtrue
+    \section{#1}
+    \vspace{2cm}
+    \subsection{#2}
+    \withrotationfalse
+    \newpage
+
+}
+
